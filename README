@@ -1,0 +1,20 @@
+Similarity Measure
+==================
+
+## Summary
+Content based similarity measure of the articles at given urls. Idea is based on representaton of each article as numerical statistic as per http://en.wikipedia.org/wiki/Tf%E2%80%93idf
+Term frequency is modified as per http://nlp.stanford.edu/IR-book/html/htmledition/sublinear-tf-scaling-1.html
+After the representation of two articles as vectors similarity measures as cosine of the angle between them (http://en.wikipedia.org/wiki/Cosine_similarity).
+
+## Example of usage
+In Program.cs there are three fields which are required: string testUrl1, string testUrl2 and int tresold.
+Strings testUrl1 and testUrl2 should contain adreses to web pages which are comparing. 
+Variable treshold is used during vocabulary creation. Probably, the best option is to set it to 2 for articles with lenght 200-400 words, but it should be tested.
+
+After clicking run program will return something like:
+
+> url1 consists of 424 words, url2 consists of 301 words.
+> Vocabulary contains 41 words after tokenization and thresholding.
+> Similarity is 0.8897
+>
+> Press any key
