@@ -18,7 +18,7 @@ namespace SimilarityMeasure
             string url3 = "http://www.dailymail.co.uk/sport/cricket/article-2591835/Pietersen-adds-Caribbean-Premier-League-packed-diary-gun-hire-enters-tournament-draft.html";
             string url4 = "http://www.telegraph.co.uk/sport/cricket/kevinpietersen/10730271/Kevin-Pietersen-enters-Caribbean-Premier-League-draft.html";
 
-            int treshold = 3;
+            int threshold = 3;
 
             try
             {
@@ -27,23 +27,23 @@ namespace SimilarityMeasure
 
                 // Compare atricles at url1 and url2
                 Console.WriteLine("Comparison of articles about minister (similar articles from dailymail.co.uk and telegraph.co.uk)..");
-                sc.Compare(url1, url2, vocabularyTreshold: treshold);
+                sc.Compare(url1, url2, vocabularyThreshold: threshold);
 
                 // Compare atricles at url3 and url4
                 Console.WriteLine("Comparison of articles about cricket (similar articles from dailymail.co.uk and telegraph.co.uk)..");
-                sc.Compare(url3, url4, vocabularyTreshold: treshold);
+                sc.Compare(url3, url4, vocabularyThreshold: threshold);
 
                 // Compare atricles at url1 and url3
                 Console.WriteLine("Comparison of article about minister and article about cricket (source - dailymail.co.uk)..");
-                sc.Compare(url1, url3, vocabularyTreshold: treshold);
+                sc.Compare(url1, url3, vocabularyThreshold: threshold);
 
                 // Compare atricles at url2 and url4
                 Console.WriteLine("Comparison of article about minister and article about cricket (source - telegraph.co.uk)..");
-                sc.Compare(url2, url4, vocabularyTreshold: treshold);
+                sc.Compare(url2, url4, vocabularyThreshold: threshold);
 
                 // Compare atricles at url1 and url4
                 Console.WriteLine("Comparison of article about minister and article about cricket (source - telegraph.co.uk and dailymail.co.uk)..");
-                sc.Compare(url1, url4, vocabularyTreshold: treshold);
+                sc.Compare(url1, url4, vocabularyThreshold: threshold);
 
                 Console.WriteLine("Press any key...");
                 Console.ReadKey();

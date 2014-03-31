@@ -12,15 +12,15 @@ For comparison of two articles instance of SimilarityCalculator should be create
 SimilarityCalculator sc = new SimilarityCalculator();
 ```
 
-After that two urls can be passed as varibles as well as treshold for vocabulary:
+After that two urls can be passed as variables as well as threshold for vocabulary:
 
 ```csharp
 string url1 = "http://www.dailymail.co.uk/news/article-2592103/Minister-faces-censure-expenses-abuse.html";
 string url2 = "http://www.telegraph.co.uk/news/newstopics/mps-expenses/10729984/Maria-Miller-to-have-to-repay-thousands-of-pounds-and-apologise-over-expenses-claims.html";
 
-int treshold = 3;
+int threshold = 3;
 
-sc.Compare(url1, url2, vocabularyTreshold: treshold);
+sc.Compare(url1, url2, vocabularyThreshold: threshold);
 ```
 
 After executing program will return something like:

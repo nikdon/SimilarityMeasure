@@ -27,7 +27,7 @@ namespace SimilarityMeasure
             return similarity;
         }
 
-        public double Compare(string url1, string url2, int vocabularyTreshold)
+        public double Compare(string url1, string url2, int vocabularyThreshold)
         {
             Spider spider = new Spider();
             spider.AddUrl(url1);
@@ -42,7 +42,7 @@ namespace SimilarityMeasure
             List<List<string>> stemmedDocs;
             List<string> vocabulary;
             Tokenizer tk = new Tokenizer();
-            vocabulary = tk.GetVocabulary(docs, out stemmedDocs, vocabularyThreshold: vocabularyTreshold);
+            vocabulary = tk.GetVocabulary(docs, out stemmedDocs, vocabularyThreshold: vocabularyThreshold);
 
             TFIDFModel _tfIDFModel = new TFIDFModel(vocabulary);
             stemmedDocs.ForEach(sd => _tfIDFModel.LoadDocument(sd));
