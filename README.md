@@ -2,8 +2,10 @@
 
 ## Summary
 Content based similarity measure of the articles at given urls. Idea is based on representaton of each article as numerical statistic as per http://en.wikipedia.org/wiki/Tf%E2%80%93idf
+
 Term frequency is modified as per http://nlp.stanford.edu/IR-book/html/htmledition/sublinear-tf-scaling-1.html
-After the representation of two articles as vectors similarity measures as cosine of the angle between them (http://en.wikipedia.org/wiki/Cosine_similarity).
+
+After the representation of two articles as vectors similarity measures as cosine of the angle between them (see http://en.wikipedia.org/wiki/Cosine_similarity).
 
 ## Example of usage
 For comparison of two articles instance of SimilarityCalculator should be created:
