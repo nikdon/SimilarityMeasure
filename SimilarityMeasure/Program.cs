@@ -27,7 +27,22 @@ namespace SimilarityMeasure
             try
             {
                 SimilarityCalculator sc = new SimilarityCalculator();
-                sc.Compare(testUrl1, testUrl2, vocabularyTreshold: treshold);
+
+                // Comparison of articles about minister (same)
+                Console.WriteLine("Comparison of articles about minister (similar articles from dailymail.co.uk and telegraph.co.uk)..");
+                sc.Compare(url1, url2, vocabularyTreshold: treshold);
+
+                Console.WriteLine("Comparison of articles about cricket (similar articles from dailymail.co.uk and telegraph.co.uk)..");
+                sc.Compare(url3, url4, vocabularyTreshold: treshold);
+
+                Console.WriteLine("Comparison of article about minister and article about cricket (source - dailymail.co.uk)..");
+                sc.Compare(url1, url3, vocabularyTreshold: treshold);
+
+                Console.WriteLine("Comparison of article about minister and article about cricket (source - telegraph.co.uk)..");
+                sc.Compare(url2, url4, vocabularyTreshold: treshold);
+
+                Console.WriteLine("Comparison of article about minister and article about cricket (source - telegraph.co.uk and dailymail.co.uk)..");
+                sc.Compare(url1, url4, vocabularyTreshold: treshold);
 
                 Console.WriteLine("Press any key...");
                 Console.ReadKey();
