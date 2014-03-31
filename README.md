@@ -8,27 +8,27 @@ After the representation of two articles as vectors similarity measures as cosin
 ## Example of usage
 For comparison of two articles instance of SimilarityCalculator should be created:
 
-'''csharp
+```csharp
 SimilarityCalculator sc = new SimilarityCalculator();
-'''
+```
 
 After that two urls can be passed as varibles as well as treshold for vocabulary:
 
-'''csharp
+```csharp
 string url1 = "http://www.dailymail.co.uk/news/article-2592103/Minister-faces-censure-expenses-abuse.html";
 string url2 = "http://www.telegraph.co.uk/news/newstopics/mps-expenses/10729984/Maria-Miller-to-have-to-repay-thousands-of-pounds-and-apologise-over-expenses-claims.html";
 
 int treshold = 3;
 
 sc.Compare(url1, url2, vocabularyTreshold: treshold);
-'''
+```
 
 After executing program will return something like:
 
-'''csharp
 > url1 consists of 424 words, url2 consists of 301 words.
+>
 > Vocabulary contains 41 words after tokenization and thresholding.
+>
 > Similarity is 0.8897
 >
 > Press any key
-'''
